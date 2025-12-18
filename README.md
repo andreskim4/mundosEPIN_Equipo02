@@ -438,7 +438,16 @@ Todos los servicios están en la red `monitoring` para comunicación interna.
 
 ## 👥 Equipo
 
-**Equipo 02 - PIN MundosE**
+**Equipo 02 – PIN MundosE**
+
+🔗 **Resultados de GitHub Actions:**  
+👉 https://github.com/andreskim4/mundosEPIN_Equipo02/actions
+
+### Integrantes
+- Sueldo Roberto Luis  
+- Gabriel Salatino  
+- Gabriel Altamirano  
+- Andres Kim
 
 ---
 
@@ -460,4 +469,4 @@ Este proyecto es parte de un trabajo práctico académico.
 
 ---
 
-**Última actualización**: Diciembre 2024
+**Última actualización**: Diciembre 2025
