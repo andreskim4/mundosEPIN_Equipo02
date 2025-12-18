@@ -40,13 +40,13 @@ jobs:
 
       - name: Generar SBOM (CycloneDX)
         run: |
-          python -m cyclonedx_py requirements requirements.txt -o sbom.json
+          python -m cyclonedx_py requirements app/requirements.txt -o app/sbom.json
           
       - name: Subir SBOM como artefacto
         uses: actions/upload-artifact@v4
         with:
           name: sbom
-          path: sbom.json
+          path: app/sbom.json
 
 
       - name: Snyk - Análisis de seguridad de dependencias
