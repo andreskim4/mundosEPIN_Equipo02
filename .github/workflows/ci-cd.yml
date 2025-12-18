@@ -32,6 +32,16 @@ jobs:
           cd app
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          
+
+      - name: Snyk - Análisis de seguridad de dependencias
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --file=requirements.txt
+        continue-on-error: true
+
 
       - name: Django check
         run: |
@@ -46,5 +56,10 @@ jobs:
       - name: Ejecutar tests
         run: |
           cd app
-          python manage.py test
+          python manage.py test --verbosity=2
         continue-on-error: true
+
+      - name: Build Docker image
+        run: |
+          cd app
+          docker build -t django-app:latest .
