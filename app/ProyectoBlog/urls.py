@@ -8,6 +8,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('App3D/', include("App3D.urls")),
     path('', include("App3D.urls")),
+    path('', include('django_prometheus.urls')),
     
     
 ]
